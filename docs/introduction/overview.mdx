@@ -1,13 +1,11 @@
 ---
-title: "Overview"
-description: "Configu is an **open-source, end-to-end ConfigOps infrastructure** that empowers engineering teams to seamlessly manage and collaborate on **software configuration data**—such as environment variables, secrets, and feature flags—across any system or environment. ⚙️✨"
-icon: "street-view"
+title: 'Overview'
+description: 'Configu is an **open-source, end-to-end ConfigOps infrastructure** that empowers engineering teams to seamlessly manage and collaborate on **software configuration data**—such as environment variables, secrets, and feature flags—across any system or environment. ⚙️✨'
+icon: 'street-view'
 ---
 
 <AccordionGroup>
-  <Accordion title="Quickstart" defaultOpen>
-    {/* Get started in minutes */}
-
+  <Accordion title="Quickstart">
     <CardGroup cols={3}>
       <Card title="Hello, World!" icon="hand-wave" href="/guides/hello-world">
         Kickstart your journey with Configu and discover how to seamlessly manage application configurations in just a few steps.
@@ -27,7 +25,7 @@ icon: "street-view"
         Learn how the .cfgu file format structures and organizes your application's configuration schema for clear, effective management.
       </Card>
       <Card title=".configu" icon="brackets-curly" href="/interfaces/.configu">
-        Discover how to utilize the .configu file for configuring Configu's interfaces 🤭, ensuring seamless integration and operation within your projects.
+        Discover how to utilize the .configu file for configuring Configu's interfaces, ensuring seamless integration and operation within your projects.
       </Card>
       <Card title="Configu CLI" icon="terminal" href="/interfaces/cli">
         Master the Configu Command Line Interface (CLI) for streamlined configuration management and deployment directly from your terminal.
@@ -35,9 +33,15 @@ icon: "street-view"
       <Card title="Configu Proxy" icon="server" href="/interfaces/proxy">
         Employ the Configu Proxy for real-time configuration tasks, enabling dynamic updates and management of application configuration.
       </Card>
+      {/* prettier-ignore */}
+      {/* todo: re-enable when ready
       <Card title="IDE Extensions" icon="code" href="/interfaces/ide">
         Enhance your IDE experience with Configu Extensions, offering features like auto-completion from configs in your code, linting to prevent errors, and schema validation to ensure integrity.
       </Card>
+      {
+        "group": "IDE Extensions",
+        "pages": ["interfaces/ide/vscode", "interfaces/ide/intellij"]
+      }, */}
       <Card title="Internal SDKs" icon="layer-group" href="/interfaces/sdk">
         Dive deep into Configu's core with our TS-based SDKs, designed for extensive integration, customization, and contribution to the Configu project.
       </Card>
@@ -48,7 +52,7 @@ icon: "street-view"
 ## Configu
 
 <a href="https://configu.com" target="_blank">
-  <img align="right" noZoom src="/images/icon/icon.svg" width="128" alt="Configu Icon"/>
+  <img align="right" noZoom src="/images/icon/icon.svg" width="128" alt="Configu Icon" />
 </a>
 
 {/* Configu[^origin] */}
@@ -96,6 +100,7 @@ If you can't find the answer you are looking for here, please join our [Discord 
     Configu automates the configuration workflow from code to runtime across all environments and lets you manage configurations through one interface that rules them all.
 
     This makes Configu's approach more robust and reliable, allowing it to prevent misconfigurations and duplications and provide visibility, a test framework, security, and compliance standardization.
+
   </Accordion>
 
   <Accordion title="Can I use other products to store my configurations with Configu (e.g. Git repository, ASM, Hashicorp Vault)?">
@@ -103,6 +108,7 @@ If you can't find the answer you are looking for here, please join our [Discord 
     You can also create your own store for your benefit and others.
 
     For example, explore our [Managing HashiCorp Vault using Configu](/guides/hashicorp-vault) tutorial.
+
   </Accordion>
 
   <Accordion title="Can I fetch configurations with Configu if I'm offline?">
@@ -114,6 +120,7 @@ If you can't find the answer you are looking for here, please join our [Discord 
     ```
     - Use the last fetch. Configu saves the latest fetched configuration in a local cache.
     - Use a self-hosted store. If you use Configu for orchestrating local files, or a local database, or run Configu's self-hosted version you can do everything offline.
+
   </Accordion>
 
   <Accordion title="Is there a free version of Configu?">
