@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://files.configu.com/schema/.cfgu.json
+
+keys:
+  GREETING:
+    default: Hello
+    enum:
+      - Hello
+      - Hi
+      - Hey
+  SUBJECT:
+    default: World
+    test:
+      - $.value.length > 3
+  MESSAGE:
+    const: '{{ $.config.GREETING.value }}, {{ $.config.SUBJECT.value }}!'

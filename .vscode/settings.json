@@ -1,37 +1,29 @@
 {
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "[markdown]": {
-    "editor.formatOnSave": false
-  },
-  "[mdx]": {
-    "editor.formatOnSave": false
-  },
-  "[javascript]": {
-    "editor.formatOnSave": false
-  },
-  "[typescript]": {
-    "editor.formatOnSave": false,
-  },
-  "typescript.tsdk": "ts/node_modules/typescript/lib",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.referencesCodeLens.enabled": true,
-  "eslint.validate": [
-    "javascript",
-    "typescript"
-  ],
+  "typescript.preferGoToSourceDefinition": true,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.tsserver.maxTsServerMemory": 8192,
+  "typescript.tsserver.watchOptions": {
+    "fallbackPolling": "dynamicPriorityPolling"
+  },
   "search.exclude": {
     "**/node_modules": true,
     "**/build": true,
     "**/dist": true,
     "**/coverage": true,
     "package-lock.json": true,
-    "tsconfig.tsbuildinfo": true
+    "pnpm-lock.yaml": true
   },
-  "cSpell.words": [
-    "cfgu",
-    "configu",
-  ],
+  "yaml.schemas": {
+    "../packages/schema/.cfgu.json": ["*.cfgu.yaml", "*.cfgu.yml"],
+    "../packages/schema/.configu.json": ["*.configu.yaml", "*.configu.yml"]
+  }
 }

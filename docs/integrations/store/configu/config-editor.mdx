@@ -3,7 +3,7 @@ title: Configs Editor
 ---
 
 The Configs Editor is where you can upsert (create/edit/delete) configs to an existing set or create a new one.
-As in the other interfaces (CLI & SDKs), you need to insert the set name (choose an existing one or create a new one) and provide schema file `.cfgu.json` using any of the methods allowed by the schema source.
+As in the other interfaces (CLI & SDKs), you need to insert the set name (choose an existing one or create a new one) and provide a schema file `.cfgu.json` using any of the methods allowed by the schema source.
 
 <Frame>![image](/images-old/configs-editor/configs-editor-picker.png)</Frame>
 
@@ -33,18 +33,34 @@ Browse available repositories, branches, and schemas to find the schema you want
 
 <Frame>![image](/images-old/configs-editor/config-editor-schema-source-github-view-cfgu.png)</Frame>
 
-Once you find the schema you want to use, click on the row and the content of the cfgu file will be retreived from GitHub. Recently selected schema files are saved in a "previous files" list available for your convenience. You can select schema files directly from the "previous files" list without selecting a repository.
+Once you find the schema you want to use, click on the row and the content of the cfgu file will be retrieved from GitHub. Recently selected schema files are saved in a "previous files" list available for your convenience. You can select schema files directly from the "previous files" list without selecting a repository.
 
 <Frame>![image](/images-old/configs-editor/config-editor-schema-source-github-previous-files.png)</Frame>
 
 <Info>
-- You will only see repositories that were selected during the GitHub App installation.
-- By default, the first repository that has a schema file in the default branch is chosen.
-- By default, when selecting a new repository, the default branch is automatically selected.
-- If the repositories, branches, and schema files are out of date. Click the "Re-sync" button to fetch the latest data from GitHub.
+  You will only see repositories that were selected during the GitHub App installation.
+  <br />
+  By default, the first repository that has a schema file in the default branch is chosen.
+  <br />
+  By default, when selecting a new repository, the default branch is automatically selected.
 </Info>
 
+<Tip>
+  If the repositories, branches, and schema files are out of date. Click the "Re-sync" button to fetch the latest data
+  from GitHub.
+</Tip>
+
 <Warning>
-- If the GitHub app is suspended, the GitHub schema source option will be disabled.
-- If a selected GitHub schema file is invalid, the row will be disabled. You may update the file in GitHub and click "Re-sync" to update the list.
+  If the GitHub app is suspended, the GitHub schema source option will be disabled.
+  <br />
+  If a selected GitHub schema file is invalid, the row will be disabled. You may update the file in GitHub and click
+  "Re-sync" to update the list.
 </Warning>
+
+### GitLab
+
+Once you've connected your [GitLab App installation](/integrations/store/configu/integrations#gitlab) to your organization, you may select GitLab as a schema source.
+
+<Frame>![image](/images/configs-editor/config-editor-schema-source-gitlab.png)</Frame>
+
+Browse available repositories, branches, and schemas to find the schema you want to use similar to the [GitHub schema source](#github).

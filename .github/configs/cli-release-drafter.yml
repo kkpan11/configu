@@ -1,31 +1,6 @@
+_extends: configu:.github/configs/release-drafter.yml
 include-paths:
-  - "ts/packages/cli/"
-name-template: "cli/v$RESOLVED_VERSION"
-tag-template: "cli/v$RESOLVED_VERSION"
-tag-prefix: "cli/"
-# common configurations - https://github.com/release-drafter/release-drafter#configuration-options
-include-labels:
-  - "feat"
-  - "bug"
-  - "chore"
-exclude-labels:
-  - "skip"
-category-template: "### $TITLE"
-categories:
-  - title: "🚀 Features"
-    label: "feat"
-  - title: "🐛 Bug Fixes"
-    label: "bug"
-  - title: "🧰 Maintenance"
-    label: "chore"
-version-resolver:
-  minor:
-    labels:
-      - "feat"
-  patch:
-    labels:
-      - "bug"
-      - "chore"
-  default: "patch"
-template: |
-  $CHANGES
+  - 'packages/cli/'
+name-template: 'cli/v$RESOLVED_VERSION'
+tag-template: 'cli/v$RESOLVED_VERSION'
+tag-prefix: 'cli/'

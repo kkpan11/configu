@@ -4,21 +4,41 @@
 .DS_Store
 *.pem
 
-# output
-build
-dist
-out
-tmp
-
-# testing
-coverage
-*.lcov
-
 # debug
 *.log
 *-debug.log
 *-error.log
 
+# local env files
+.env*
+
 # dependencies
 node_modules
+jspm_packages
+.pnp
+.pnp.js
 .npm
+
+# output
+build
+dist
+out
+.next
+tmp
+
+# build cache
+*.tsbuildinfo
+
+# testing
+coverage
+*.lcov
+*.info
+
+# linter
+.eslintcache
+
+# pnpm v8-compile-cache dependency
+v8-compile-cache*/
+
+# IDE
+.idea

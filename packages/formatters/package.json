@@ -1,0 +1,58 @@
+{
+  "name": "@configu/formatters",
+  "version": "0.0.0",
+  "description": "Configu Formatters Extension",
+  "keywords": [
+    "config-format",
+    "configu-formatters",
+    "format",
+    "formats",
+    "formatters"
+  ],
+  "homepage": "https://configu.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/configu/configu",
+    "directory": "packages/formatters"
+  },
+  "bugs": "https://github.com/configu/configu/issues",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "@configu/dev",
+    "email": "dev@configu.com",
+    "url": "https://configu.com"
+  },
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepublish": "attw --pack .",
+    "clean": "shx rm -rf dist",
+    "prebuild": "pnpm run clean",
+    "build": "tsx ../../build.mts"
+  },
+  "dependencies": {
+    "change-case": "^5.4.4",
+    "dotenv": "^17.2.3",
+    "lodash": "^4.17.21",
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {}
+}

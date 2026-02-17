@@ -1,43 +1,41 @@
-// https://containers.dev/implementors/json_reference
+// For format details, see https://aka.ms/devcontainer.json.
 {
   "name": "Configu Dev Container",
   "build": {
     "dockerfile": "Dockerfile",
-    "args": {
-      "NODE_VERSION": "20.10.0",
-      "PYTHON_VERSION": "3.9.16",
-      "GO_VERSION": "1.21.3"
-    },
     "context": ".."
   },
-  "forwardPorts": [
-    8080,
-    3000
-  ],
-  "portsAttributes": {
-    "3000": {
-      "label": "Docs"
-    },
-    "8080": {
-      "label": "Examples"
-    }
-  },
-  "postCreateCommand": "/bin/bash -x .devcontainer/bootstrap.sh",
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "pnpm install",
+  "postCreateCommand": "node -v && pnpm -v && configu -v",
   "customizations": {
-    "terminal.integrated.shell.linux": "/bin/bash",
     "vscode": {
       "extensions": [
-        "streetsidesoftware.code-spell-checker",
-        "wmaurer.change-case",
-        "ow.vscode-subword-navigation",
-        "yzhang.markdown-all-in-one",
+        "aaron-bond.better-comments",
+        "christian-kohler.seadubjunenpm-intellisense",
+        "christian-kohler.path-intellisense",
         "dbaeumer.vscode-eslint",
+        "editorconfig.editorconfig",
         "esbenp.prettier-vscode",
+        "github.vscode-github-actions",
+        "mintlify.mintlify-snippets",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.powershell",
+        "pflannery.vscode-versionlens",
+        "redhat.vscode-yaml",
+        "streetsidesoftware.code-spell-checker",
+        "unifiedjs.vscode-mdx",
+        "wix.vscode-import-cost",
         "yoavbls.pretty-ts-errors",
-        "ms-python.python",
-        "golang.go"
+        "yzhang.markdown-all-in-one"
       ]
     }
   },
+  "portsAttributes": {
+    "3000": {
+      "label": "Docs"
+    }
+  },
+  "forwardPorts": [3000],
   "remoteUser": "root"
 }

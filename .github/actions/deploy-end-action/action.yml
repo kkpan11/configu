@@ -1,15 +1,13 @@
-name: "Deployment end hook"
+name: Deployment end hook
+description: Run post deployment tasks
 
 inputs:
-  package-name:
-    required: true
-  package-version:
-    required: true
   slack-webhook:
+    description: The Slack webhook URL
     required: true
 
 runs:
-  using: "composite"
+  using: composite
   steps:
     - name: Post Slack build status
       uses: 8398a7/action-slack@v3

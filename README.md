@@ -1,4 +1,4 @@
-<!-- <img src="https://raw.githubusercontent.com/configu/configu/main/assets/hacktoberfest-23-banner.svg" alt="Hacktoberfest 23 Banner" /> -->
+<!-- <img src="https://raw.githubusercontent.com/configu/configu/refs/heads/main/docs/images/banner/hacktoberfest-24-banner.svg" alt="Hacktoberfest 24 Banner" /> -->
 <br/>
 <p align="center">
   <a target="_blank" href="https://configu.com">
@@ -24,10 +24,11 @@
   <strong>Open-source ConfigOps infrastructure</strong> that empowers engineering teams to seamlessly manage and collaborate on <strong>software configuration data</strong>—such as environment variables, secrets, and feature flags—<strong>across any system or environment.</strong> ⚙️✨
 </p>
 <p align="center">
-  <a target="_blank" href="https://docs.configu.com/guides/hello-world"><strong>Get Started 👋</strong></a> ・ <a target="_blank" href="https://docs.configu.com/guides/hello-world"><strong>Explore Docs 📚</strong></a> ・ <a target="_blank" href="https://docs.configu.com/guides/hello-world"><strong>Join Chat 💬</strong></a>
+  <a target="_blank" href="https://docs.configu.com/guides/hello-world"><strong>Get Started 👋</strong></a> ・ <a target="_blank" href="https://docs.configu.com/"><strong>Explore Docs 📚</strong></a> ・ <a target="_blank" href="https://discord.com/invite/cjSBxnB9z8"><strong>Join Chat 💬</strong></a>
 </p>
 
 ## ⭐️ Configu?
+
 <!-- docs/introduction/overview#Configu -->
 
 <a href="https://configu.com" target="_blank">
@@ -39,15 +40,21 @@
 **Configu** is designed to be **easy to integrate** into existing systems and workflows, and to be adaptable to the diverse needs of teams and projects. It can be used from the command line, integrated in a build pipeline, or embedded in a program. Configu **scales** from small to large, simple to complex, ad-hoc to repetitive configuration tasks. It establishes a **powerful abstraction layer** over configuration data, enabling engineering teams to perform **secure and error-free configuration operations** throughout the software development lifecycle.
 
 [^origin]: software **configu**~~ration~~ data.
+
 [^simple]: **🎯 Simple**: Offers a **unified API** for all configuration tasks, whether dealing with files, databases, secret managers, or custom implementations. Enables end-to-end configuration **automation** throughout the software development lifecycle.
+
 [^modern]: **🚀 Modern**: Expertly **manages** configuration data across multiple deployments, workflows, runtimes, and environments. **Scales** to accommodate infinite configuration contexts, maintaining seamless management and organization.
+
 [^secure]: **🛡️ Secure**: Equipped with a robust configuration **type system** and a comprehensive **policy framework**. Provides built-in **safeguards** against application misconfigurations, ensuring a secure environment for your configurations.
+
 [^common]: **🌐 Common**: Promotes a clear understanding and consistent management of configuration data. Facilitates **collaboration** and ensures configurations are accurate and up-to-date. Provides a declarative approach that integrates seamlessly with coding tasks, enabling "Learn Once, Write Anywhere" flexibility and automation across diverse environments and systems.
+
 [^flexible]: **🧩 Flexible**: Adapts to any **modern tech** stack and use case. Allows to manage configurations across files, directories, codebases, and repositories. Accommodates configuration values over a **context tree** for inheritance and advanced overriding. Allows combining and **piping commands** to produce any necessary **configuration artifact**.
+
 [^extensible]: **🛠 Extensible**: Supports **custom** configuration **storage** implementations, configuration **formatters**, and **injectors**. Continuously evolving and driven by **community** contributions.
 
 <a href="https://configu.com" target="_blank">
-  <img src="https://raw.githubusercontent.com/configu/configu/main/docs/images/banner/software-code-configurations-1.svg" alt="Configu Icon">
+  <img src="docs/images/banner/readme-equation.svg" alt="Configu Icon" width="100%">
 </a>
 
 ## 📚 Documentation
@@ -65,17 +72,18 @@ Explore Configu with our easy-to-follow documentation:
 Every contribution matters! Here’s how you can jump in and make an impact:
 
 - **[Start Here](https://github.com/configu/configu/blob/main/CONTRIBUTING.md)**: Find your way around our processes.
-- **[Pair Up](mailto:support@configu.com?subject=Pairing%20session&body=I'd%20like%20to%20do%20a%20pairing%20session%20...)**: Schedule a free, hands-on session with our team.
 - **[Engage on Discord](https://discord.com/invite/cjSBxnB9z8)**: Join our community discussion.
 - **[Provide Feedback](https://github.com/configu/configu/issues/265)**: Share your insights and suggestions.
 - **[Report & Fix Bugs](https://github.com/configu/configu/issues)**: Help us enhance Configu.
 - **[Improve Code & Docs](https://github.com/configu/configu/pulls)**: Contribute features and documentation.
 
-Massive thanks 🙏 to all our [contributors](https://github.com/configu/configu/graphs/contributors) for your time and efforts in making Configu better. Keep rocking 💪!
+<!-- - **[Pair Up](mailto:support@configu.com?subject=Pairing%20session&body=I'd%20like%20to%20do%20a%20pairing%20session%20...)**: Schedule a free, hands-on session with our team. -->
 
-> [!NOTE]
-> Eager to code? Kickstart your Configu development now:<br/>
-> [GitHub Codespaces »](https://codespaces.new/configu/configu) ・ [CodeSandbox »](https://codesandbox.io/p/github/configu/configu/main)
+<!-- Eager to code? Kickstart your Configu development now:<br/>  -->
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/configu/configu) [![Edit in CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/github/configu/configu/main) [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/configu/configu) [![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/configu/configu)
+
+Massive thanks 🙏 to all our [contributors](https://github.com/configu/configu/graphs/contributors) for your time and energy helping Configu grow! 🌱 Your contributions are incredibly valued. Keep rocking 💪!
 
 <!-- ## 🗺️ Roadmap
 
@@ -106,6 +114,12 @@ This repository is a monorepo that contains the Configu user interface packages.
 - [DEV Community ‍- #configuration](https://dev.to/t/configuration/top/infinity)
 - [Webinar - Configuration-as-Code](https://www.youtube.com/live/Z_Vz8v6e-U4?si=bDao_gIo1xiLDeQS&t=107)
 - [Post - Configuration-as-Code](https://dev.to/rannn505/configuration-as-code-automating-application-configuration-45k6)
+
+<!-- ## 🙌 Thanks to all of our contributors
+
+A huge thanks for spending your time and energy helping Configu grow! 🌱 Your contributions are incredibly valued.
+
+<img src="https://contributors-img.web.app/image?repo=configu/configu" alt="Contributors"/> -->
 
 ## 🪪 License
 

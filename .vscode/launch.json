@@ -2,81 +2,79 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "play cli",
+      "name": "attach",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "restart": false,
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
+    },
+    // https://tsx.is/vscode
+    {
+      "name": "tsx",
       "type": "node",
       "request": "launch",
+      "program": "${file}",
+      "runtimeExecutable": "tsx",
       "console": "integratedTerminal",
-      "program": "${workspaceRoot}/ts/packages/cli/bin/dev.js",
+      "internalConsoleOptions": "neverOpen",
       "env": {
-        // "VAULT_ADDR": "http://127.0.0.1:8200",
-        // "VAULT_TOKEN": "root",
-        // "CONFIGU_ORG": "playground",
-        // "CONFIGU_TOKEN": ""
+        "DEBUG": "configu"
+      },
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
+    },
+    {
+      "name": "cli",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/packages/cli/src/configu.ts",
+      "runtimeExecutable": "tsx",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"],
+      "cwd": "${workspaceFolder}/examples/playground",
+      "env": {
+        // "DEBUG": "configu",
+        "EDITOR": "code"
       },
       "args": [
-        // "test",
-        // "upsert",
-        // "export",
         // "eval",
-        // "delete",
-        "run",
-        // "--script",
-        // "test",
+        // "--defaults",
+        // ====================
+        "upsert",
+        // "-f",
+        // ".env",
+        // "-l",
+        // "X.0=500",
+        // "-l",
+        // "Y.a.c=true",
+        "-l",
+        "SUBJECT=blablaaaa",
+        "--set",
+        "prod/us-east-1"
+        // "--edit",
+        // "--prune",
+        // "--dry"
+        // ====================
         // "--store",
-        // "json",
-        // "--set",
-        // "",
+        // "xml",
         // "--schema",
-        // "${workspaceFolder}/ts/ts.cfgu.json"
-      ],
-      "outFiles": [
-        "${workspaceFolder}/**/*.js",
-        "!**/node_modules/**"
-      ],
-      "skipFiles": [
-        "<node_internals>/**",
-        "node_modules/**"
-      ],
-      "preLaunchTask": "build ts"
-    },
-    {
-      "name": "play node sdk",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceRoot}/ts/packages/node",
-      "runtimeExecutable": "node",
-      "runtimeArgs": [
-        "--nolazy",
-        "--inspect",
-        "-r",
-        "ts-node/register"
-      ],
-      "args": [
-        "test/index.ts"
-      ],
-      "internalConsoleOptions": "openOnSessionStart",
-      "skipFiles": [
-        "<node_internals>/**",
-        "node_modules/**"
-      ],
-      "preLaunchTask": "build ts"
-    },
-    {
-      "name": "run ts tests",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceRoot}/ts",
-      "runtimeArgs": [
-        "--inspect",
-        "node_modules/.bin/jest",
-        "--runInBand"
-      ],
-      "args": [
-        "ts/src/commands/commands.test.ts"
-      ],
-      // "args": ["ts/src/types/types.test.ts"],
-      "outputCapture": "std"
-      // "internalConsoleOptions": "neverOpen",
-    },
+        // "https://raw.githubusercontent.com/configu/configu/refs/heads/main/packages/schema/data/xy.cfgu.yaml"
+        // "${workspaceFolder}/packages/schema/data/xy.cfgu.yaml",
+        // "--kv",
+        // "Z=8",
+        // ====================
+        // "export",
+        // "--format",
+        // "json",
+        // ====================
+        // "run",
+        // "--script",
+        // "script1",
+        // ====================
+        // "<",
+        // "./stdin",
+      ]
+    }
   ]
 }
